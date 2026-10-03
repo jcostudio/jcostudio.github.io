@@ -4,6 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JC | Content Creator</title>
+<meta name="description" content="Content creator and curator. Social media, UGC, and brand curation with taste, rhythm, and an eye for beauty.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jcostudio.github.io/">
+<meta property="og:title" content="JC | Content Creator">
+<meta property="og:description" content="Content creator and curator. Social media, UGC, and brand curation with taste, rhythm, and an eye for beauty.">
+<meta property="og:image" content="https://jcostudio.github.io/photos/share-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://jcostudio.github.io/photos/share-preview.jpg">
+<meta name="theme-color" content="#FAF8F5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:wght@400;500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
@@ -296,6 +307,20 @@ mask-image:radial-gradient(circle closest-side,#000 91%,rgba(0,0,0,.7) 95%,rgba(
 .cta-social a{color:var(--ink);text-decoration:none;padding-bottom:3px;border-bottom:1px solid rgba(181,143,74,.45);transition:border-color .4s ease}
 .cta-social a:hover{border-color:#B58F4A}.cta-social i{font-style:normal;color:#C9AE72;margin:0 1rem}
 .cta-handle{margin:.7rem 0 0;font-size:.9rem;color:#6d786f;letter-spacing:.04em}
+.sharebtn{margin-top:2.2rem;padding:.75rem 1.9rem;border:1px solid rgba(181,143,74,.6);border-radius:999px;background:transparent;font:400 .9rem Jost,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);cursor:pointer;transition:background .5s ease,box-shadow .5s ease}
+.sharebtn:hover{background:rgba(255,255,255,.8);box-shadow:0 14px 34px -18px rgba(150,120,60,.5)}
+#sharebox{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(250,248,245,.78);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);opacity:0;transition:opacity .5s ease}
+#sharebox[hidden]{display:none}#sharebox.on{opacity:1}
+.sb-card{position:relative;width:min(92vw,380px);padding:2.4rem 2rem 2rem;border-radius:36px;background:#fff;border:1px solid rgba(201,174,114,.45);box-shadow:0 50px 100px -50px rgba(70,84,90,.5);text-align:center;transform:translateY(12px);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+#sharebox.on .sb-card{transform:none}
+.sb-x{position:absolute;top:.8rem;right:1rem;border:0;background:none;font-size:1.7rem;line-height:1;color:#8a7a55;cursor:pointer}
+.sb-qr{width:min(64vw,250px);aspect-ratio:1;margin:0 auto}.sb-qr img{width:100%;height:100%;display:block}
+.sb-scan{margin:1.2rem 0 0;font:400 .78rem Jost,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8a7a55}
+.sb-url{margin:.5rem 0 0;font:400 1.6rem "Cormorant Garamond",Georgia,serif;color:var(--ink)}
+.sb-actions{display:flex;gap:.7rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap}
+.sb-actions button{padding:.7rem 1.4rem;border-radius:999px;border:1px solid rgba(181,143,74,.6);background:#fff;font:400 .85rem Jost,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);cursor:pointer;transition:background .4s ease}
+.sb-actions button:hover{background:#FAF6EE}
+.sb-msg{min-height:1.2em;margin:.9rem 0 0;font-size:.85rem;color:#6d786f}
 .mail:hover{transform:translateY(-4px);background:#fff;box-shadow:0 34px 76px -30px rgba(150,120,60,.6)}
 @media(max-width:700px){#contact{padding-top:6rem;padding-bottom:6.5rem}.links a{min-height:220px;padding:2rem 1.4rem}}
 
@@ -403,17 +428,27 @@ html[lang="zh"] body h1,html[lang="ar"] body h1,html[lang="zh"] body #bar .mark,
     </div>
     <div class="row">
       <h3>Social Media Strategist and Campaign Manager, MAMM Alliance for the Performing Arts</h3>
-      <p class="when">Cal State Fullerton, 2015 to 2016</p>
+      <p class="when">Cal State Fullerton</p>
       <p>Led social media strategy and campaign management for a nonprofit raising scholarship funds for fine arts students. Rebuilt the Instagram presence around curated, editorial imagery, trained board members and volunteers in hashtag strategy, SEO, and analytics to measure return on their time, produced event flyers and fundraiser campaigns, and redesigned the organization's website.</p>
     </div>
     <div class="row">
       <h3>Project Manager, Sales and Delivery, Tesla</h3>
-      <p class="when">Costa Mesa and Buena Park, December 2015 to January 2019</p>
-      <p>Ran Southern California marketing activations and test-drive events for high-profile clients, raising lead volume by 20%. Delivered white-glove, discretion-first experiences and scaled Orange County delivery operations from 13 to more than 130 staff.</p>
+      <p class="when">Costa Mesa and Buena Park, Southern California</p>
+      <p>Joined in the Model S era, when Tesla was a six-figure luxury car, and was part of the delivery launches for the Model X and Model 3. Scaled Orange County delivery operations from 13 to more than 130 staff, reaching more than 130 deliveries a day across the Costa Mesa and Buena Park centers while keeping a #1-in-region, top-10-globally guest experience. Ran Southern California marketing activations and test-drive events for high-profile clients, raising lead volume by 20%.</p>
+    </div>
+    <div class="row">
+      <h3>Inside Delivery Finance Specialist, VinFast</h3>
+      <p class="when">Los Angeles, North American launch</p>
+      <p>Brought on to start deliveries for VinFast's North American launch, the first Vietnamese electric vehicle sold in North America. Owned California DMV contract compliance and financial transactions, cutting processing delays by 25%, served as the liaison between U.S. lenders and Vietnam-based EV teams, and built a digital checklist for contract finalization that cut errors by 40%.</p>
+    </div>
+    <div class="row">
+      <h3>Project Manager, SeneGence International</h3>
+      <p class="when">Foothill Ranch headquarters</p>
+      <p>Led the launch of the new Hong Kong headquarters website, coordinating U.S. and Asia-based teams on the site's flow, translations, and localized marketing assets, contributing to a 30% quarterly revenue increase. Wrote and revamped the global sales recognition programs for distributors, raising distributor participation by 50%.</p>
     </div>
     <div class="row">
       <h3>VIP and Fine Dining Service Leadership</h3>
-      <p class="when">Fig &amp; Olive, Morton's The Steakhouse, Maggiano's, and others, 2000 to 2016</p>
+      <p class="when">Fig &amp; Olive, Morton's The Steakhouse, Maggiano's, and others</p>
       <p>More than 15 years of discreet, high-touch service for VIP and high-profile guests, from Boardroom Captain and Lead Server to Banquet Team Captain and Corporate Trainer.</p>
     </div>
     <div class="row">
@@ -563,7 +598,18 @@ html[lang="zh"] body h1,html[lang="ar"] body h1,html[lang="zh"] body #bar .mark,
   <a class="mail" href="mailto:Mrcooperonyx@gmail.com">Mrcooperonyx@gmail.com</a>
   <p class="cta-social" data-i18n-skip><a href="https://www.tiktok.com/@mr_cooperonyx" target="_blank" rel="noopener">TikTok</a><i>·</i><a href="https://www.instagram.com/mr_cooperonyx" target="_blank" rel="noopener">Instagram</a><i>·</i><a href="https://www.youtube.com/@mr_cooperonyx" target="_blank" rel="noopener">YouTube</a></p>
   <p class="cta-handle">@Mr_CooperOnyx</p>
+  <button class="sharebtn" type="button" id="shareOpen">Share this site</button>
 </section>
+<div id="sharebox" role="dialog" aria-modal="true" aria-label="Share this site" hidden>
+  <div class="sb-card">
+    <button class="sb-x" type="button" aria-label="Close" data-i18n-skip>&times;</button>
+    <div class="sb-qr" data-i18n-skip><img src="photos/share-qr.svg" alt="QR code for jcostudio.github.io" width="250" height="250"></div>
+    <p class="sb-scan">Scan to visit</p>
+    <p class="sb-url" data-i18n-skip>jcostudio.github.io</p>
+    <div class="sb-actions"><button type="button" id="shareCopy">Copy link</button><button type="button" id="shareNative" hidden>Share</button></div>
+    <p class="sb-msg" aria-live="polite" data-i18n-skip></p>
+  </div>
+</div>
 
 <footer>&copy; <span id="yr"></span> JC</footer>
 <div id="lb" role="dialog" aria-label="Image viewer"><img alt=""></div>
@@ -5091,6 +5137,20 @@ document.getElementById("yr").textContent=new Date().getFullYear();
  if(url)set(url,false);else if(saved&&saved!=="en")set(saved);
  else if(!saved){const nav=((navigator.languages&&navigator.languages[0])||navigator.language||"en").slice(0,2).toLowerCase();
   if(SUGGEST[nav])setTimeout(()=>suggest(nav),3500)}
+})();
+</script>
+<script>
+(()=>{const box=document.getElementById("sharebox"),open=document.getElementById("shareOpen");if(!box||!open)return;
+ const URL="https://jcostudio.github.io/",msg=box.querySelector(".sb-msg"),nat=document.getElementById("shareNative");
+ const tr=s=>{try{const d=window.I18N&&I18N[document.documentElement.lang];return(d&&d.t[s])||s}catch(e){return s}};
+ if(navigator.share)nat.hidden=false;
+ let last;const show=()=>{last=document.activeElement;msg.textContent="";box.hidden=false;requestAnimationFrame(()=>box.classList.add("on"));box.querySelector(".sb-x").focus()};
+ const hide=()=>{box.classList.remove("on");setTimeout(()=>{box.hidden=true;last&&last.focus()},450)};
+ open.addEventListener("click",show);box.querySelector(".sb-x").addEventListener("click",hide);
+ box.addEventListener("click",e=>{if(e.target===box)hide()});
+ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!box.hidden)hide()});
+ document.getElementById("shareCopy").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(URL)}catch(e){const t=document.createElement("textarea");t.value=URL;document.body.appendChild(t);t.select();try{document.execCommand("copy")}catch(_){}t.remove()}msg.textContent=tr("Link copied")});
+ nat.addEventListener("click",()=>{navigator.share({title:"JC | Content Creator",text:tr("Content creator and curator, also known online as Mr. Cooper Onyx."),url:URL}).catch(()=>{})});
 })();
 </script>
 </body>
