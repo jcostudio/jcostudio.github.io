@@ -430,6 +430,10 @@ html[dir="rtl"] header>.sharewrap{left:auto;right:1.4rem}
 #shareModal{position:fixed;inset:0;z-index:30;display:none;align-items:center;justify-content:center;padding:1rem;background:rgba(236,232,224,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 #shareModal.open{display:flex}
 .sharecard{position:relative;width:min(92vw,380px);padding:2rem 1.6rem 1.6rem;border-radius:34px;background:rgba(252,250,246,.97);border:1px solid rgba(200,185,160,.5);box-shadow:0 40px 90px -36px rgba(70,84,90,.55);text-align:center;animation:sharein .7s cubic-bezier(.2,.7,.2,1)}
+/* headline: same brushed-gold finish as the brooch, with a slow light sweep */
+header .hl{background-image:linear-gradient(105deg,rgba(255,250,232,0) 0%,rgba(255,250,232,0) 41%,rgba(255,250,232,.55) 46%,rgba(255,252,240,.95) 50%,rgba(255,250,232,.55) 54%,rgba(255,250,232,0) 59%,rgba(255,250,232,0) 100%),linear-gradient(180deg,#BBA874 0%,#A08848 30%,#846C34 50%,#9A8250 60%,#C2B07E 78%,#D3C49C 88%,#A08848 100%);background-size:250% 100%,100% 100%;background-repeat:no-repeat;background-position:115% 0,0 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 1px 0 rgba(255,250,235,.55)) drop-shadow(0 3px 12px rgba(150,125,60,.28));animation:hlshine 7s cubic-bezier(.45,.05,.35,1) 1.2s infinite}
+@keyframes hlshine{0%{background-position:115% 0,0 0}55%,100%{background-position:-15% 0,0 0}}
+@media(prefers-reduced-motion:reduce){header .hl{animation:none;background-position:50% 0,0 0}}
 @keyframes sharein{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
 .sharecard h3{font:400 1.7rem "Cormorant Garamond",Georgia,serif;margin:0 0 .3rem}
 .sharecard .sub{font-size:.92rem;color:#6d786f;margin:0 0 1.1rem}
