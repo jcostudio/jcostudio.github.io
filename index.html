@@ -445,6 +445,18 @@ header .hl{background-image:linear-gradient(105deg,rgba(255,250,232,0) 0%,rgba(2
 .shareact button:hover{background:#fff;box-shadow:0 8px 22px -12px rgba(150,120,60,.5)}
 .shareact button[hidden]{display:none}
 .shareclose{position:absolute;top:.7rem;inset-inline-end:.9rem;border:0;background:none;font-size:1.5rem;line-height:1;color:#8a7a55;cursor:pointer;padding:.2rem .5rem}
+/* share panel: original look */
+.sharecard{width:min(92vw,410px);padding:2.9rem 1.8rem 2rem;border-radius:46px;background:#fff;border:1.5px solid rgba(214,196,160,.8);box-shadow:0 44px 100px -40px rgba(70,84,90,.5)}
+.qrtile{padding:0;border:0;border-radius:0;background:none;box-shadow:none}
+.qrtile svg{width:min(68vw,272px);height:auto}
+.sharecard .sub{margin:1.7rem 0 .55rem;font:500 .8rem "Jost",sans-serif;letter-spacing:.26em;text-transform:uppercase;color:#8a7a4e}
+.shareurl-d{margin:0 0 1.6rem;font:400 clamp(1.55rem,5.6vw,1.9rem)/1.2 "Cormorant Garamond",Georgia,serif;color:#2f3b35;overflow-wrap:anywhere}
+.shareact{gap:.9rem}
+.shareact button{padding:.85rem 1.75rem;border:1.5px solid rgba(214,196,160,.85);background:#fff;font:400 .9rem "Jost",sans-serif;letter-spacing:.17em;text-transform:uppercase}
+.shdl{margin-top:1.25rem;padding:0 0 .2rem;border:0;border-bottom:1px solid rgba(200,175,130,.6);background:none;font:400 .74rem "Jost",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8a7a4e;cursor:pointer}
+.shdl:hover{color:#2f3b35;border-color:var(--gold)}
+.sharecard .shareclose{top:1.15rem;inset-inline-end:1.35rem;font-size:2.1rem;font-weight:300;color:#8a7a55}
+.vh{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}
 @media(max-width:720px){header>.sharewrap{top:.8rem;left:.9rem}html[dir="rtl"] header>.sharewrap{left:auto;right:.9rem}}
 </style>
 </head>
@@ -762,11 +774,13 @@ header .hl{background-image:linear-gradient(105deg,rgba(255,250,232,0) 0%,rgba(2
 <div id="shareModal" role="dialog" aria-modal="true" aria-labelledby="shareTitle" hidden>
   <div class="sharecard" data-i18n-skip>
     <button class="shareclose" type="button" aria-label="Close">&times;</button>
-    <h3 id="shareTitle">Share this site</h3>
-    <p class="sub">Scan to open the site</p>
+    <h3 id="shareTitle" class="vh">Share this site</h3>
     <div class="qrtile" id="qrbox" data-i18n-skip></div>
-    <input class="shareurl" id="shareurl" type="text" readonly aria-label="Link" data-i18n-skip>
-    <div class="shareact"><button type="button" id="shCopy"><span class="t">Copy link</span></button><button type="button" id="shNative" hidden><span class="t">Share</span></button><button type="button" id="shQr"><span class="t">Download QR code</span></button></div>
+    <p class="sub">Scan to visit</p>
+    <p class="shareurl-d" id="shareurlD" dir="ltr">jcostudio.github.io</p>
+    <input class="shareurl vh" id="shareurl" type="text" readonly aria-label="Link" tabindex="-1" data-i18n-skip>
+    <div class="shareact"><button type="button" id="shCopy"><span class="t">Copy link</span></button><button type="button" id="shNative" hidden><span class="t">Share</span></button></div>
+    <button type="button" id="shQr" class="shdl"><span class="t">Download QR code</span></button>
   </div>
 </div>
 <div id="lb" role="dialog" aria-label="Image viewer"><img alt=""></div>
@@ -5117,7 +5131,7 @@ cats.forEach((c,n)=>{
   fil.append(b);
 });
 (()=>{
- const FR=[["curation/fr-16.jpg", 0.7727], ["curation/fr-01.jpg", 0.669], ["curation/fr-03.jpg", 1.0446], ["curation/fr-15.jpg", 1.5795], ["curation/fr-05.jpg", 0.66], ["curation/fr-09.jpg", 0.9806], ["curation/fr-17.jpg", 0.6642], ["curation/fr-04.jpg", 0.755], ["curation/fr-07.jpg", 0.8346], ["curation/fr-02.jpg", 0.6752], ["curation/fr-08.jpg", 0.8], ["curation/fr-11.jpg", 0.6667], ["curation/fr-14.jpg", 0.7578], ["curation/fr-06.jpg", 0.6575], ["curation/fr-12.jpg", 0.6284]], ZZ=[["curation/zz-05.jpg", 1.4206], ["curation/zz-19.jpg", 0.5997], ["curation/zz-06.jpg", 0.7567], ["curation/zz-20.jpg", 0.6924], ["curation/zz-01.jpg", 1.0065], ["curation/zz-18.jpg", 0.8804], ["curation/zz-22.jpg", 2.4325], ["curation/zz-04.jpg", 0.7222], ["curation/zz-16.jpg", 0.8029], ["curation/zz-24.jpg", 2.2], ["curation/zz-07.jpg", 0.957], ["curation/zz-02.jpg", 0.8564], ["curation/zz-15.jpg", 0.9434], ["curation/zz-21.jpg", 0.8754], ["curation/zz-23.jpg", 1.812]], MA=[["mamm/choirs.jpg", 1.0162], ["mamm/dancer.jpg", 1.0169], ["mamm/orchestra.jpg", 1.5034], ["mamm/quote.jpg", 0.9973], ["mamm/windsymphony.jpg", 1.4883]], MB=[["mamm/train-1.jpg", 1.5621], ["mamm/train-3.jpg", 0.7124], ["mamm/train-2.jpg", 0.7412], ["mamm/train-4.jpg", 0.7739]], MC=[["mamm/ramble-flyer.jpg", 1.4707], ["mamm/apple-flyer.jpg", 0.678], ["mamm/founders-day.jpg", 0.8362], ["mamm/parade.jpg", 1.0123]];
+ const FR=[["curation/fr-16.jpg", 0.7727], ["curation/fr-01.jpg", 0.669], ["curation/fr-03.jpg", 1.0446], ["curation/fr-15.jpg", 1.5795], ["curation/fr-05.jpg", 0.66], ["curation/fr-09.jpg", 0.9806], ["curation/fr-17.jpg", 0.6642], ["curation/fr-04.jpg", 0.755], ["curation/fr-07.jpg", 0.8346], ["curation/fr-02.jpg", 0.6752], ["curation/fr-08.jpg", 0.8], ["curation/fr-11.jpg", 0.6667], ["curation/fr-14.jpg", 0.7578], ["curation/fr-06.jpg", 0.6575], ["curation/fr-12.jpg", 0.6284]], ZZ=[["curation/zz-05.jpg", 1.4206], ["curation/zz-19.jpg", 0.5997], ["curation/zz-06.jpg", 0.7567], ["curation/zz-20.jpg", 0.6924], ["curation/zz-01.jpg", 1.0065], ["curation/zz-18.jpg", 0.8804], ["curation/zz-22.jpg", 2.4325], ["curation/zz-04.jpg", 0.7222], ["curation/zz-16.jpg", 0.8029], ["curation/zz-24.jpg", 2.2], ["curation/zz-07.jpg", 0.957], ["curation/zz-02.jpg", 0.8564], ["curation/zz-15.jpg", 0.9434], ["curation/zz-21.jpg", 0.8754], ["curation/zz-23.jpg", 1.812]], MA=[["mamm/choirs.jpg", 1.0162], ["mamm/dancer.jpg", 1.6074], ["mamm/orchestra.jpg", 1.5034], ["mamm/quote.jpg", 0.9973], ["mamm/windsymphony.jpg", 1.4883]], MB=[["mamm/train-1.jpg", 1.5621], ["mamm/train-3.jpg", 0.7124], ["mamm/train-2.jpg", 0.7412], ["mamm/train-4.jpg", 0.7739]], MC=[["mamm/ramble-flyer.jpg", 1.4707], ["mamm/apple-flyer.jpg", 0.678], ["mamm/founders-day.jpg", 0.8362], ["mamm/parade.jpg", 1.0123]];
  const build=(id,list,alt)=>{const f=document.getElementById(id);if(!f)return f;
   f.innerHTML=list.map((t,i)=>'<figure class="ft frise" data-r="'+t[1]+'" data-depth="'+(0.5+((i*37)%10)/20).toFixed(2)+'" style="--dl:'+(-(i%6)*1.3).toFixed(1)+'s"><img src="photos/'+t[0]+'" alt="'+alt+'" loading="eager"></figure>').join("");return f};
  const frF=build("fld-fr",FR,"A curated image for the French Spotlight"),zzF=build("fld-zz",ZZ,"A mood board image for ZzyxX Shoes"),maF=build("fld-mmA",MA,"Curated fine arts imagery for MAMM Alliance"),mbF=build("fld-mmB",MB,"JC training the MAMM Alliance team on social media"),mcF=build("fld-mmC",MC,"A campaign graphic for MAMM Alliance");
@@ -5311,11 +5325,11 @@ document.getElementById("yr").textContent=new Date().getFullYear();
  const live="https://jcostudio.github.io/";
  const url=()=>{let b=/^https?:/.test(location.protocol)?location.origin+location.pathname:live;const l=window.__tr&&__tr.current();return l&&l!=="en"?b+"?lang="+l:b};
  let qr,qrSvg="";
- const star=()=>{const ray=(a,L,w)=>'<path transform="rotate('+a+')" d="M'+(-w)+' 0L'+(-w*.45).toFixed(3)+' '+(-L)+'L0 '+(-L)+'L0 0Z" fill="url(#qrL)"/><path transform="rotate('+a+')" d="M0 0L0 '+(-L)+'L'+(w*.45).toFixed(3)+' '+(-L)+'L'+w+' 0Z" fill="url(#qrD)"/>';
-  let g="";[0,90,180,270].forEach(a=>g+=ray(a,2,.065));[45,135,225,315].forEach(a=>g+=ray(a,.38,.04));return g+'<circle r=".11" fill="url(#qrB)"/>'};
+ const star=()=>{const ray=(a,L,w)=>'<path transform="rotate('+a+')" d="M'+(-w)+' 0 Q'+(-w*.12).toFixed(3)+' '+(-L*.42).toFixed(2)+' 0 '+(-L)+' L0 0Z" fill="url(#qrL)"/><path transform="rotate('+a+')" d="M0 0 L0 '+(-L)+' Q'+(w*.12).toFixed(3)+' '+(-L*.42).toFixed(2)+' '+w+' 0Z" fill="url(#qrD)"/>';
+  let g="";[0,90,180,270].forEach(a=>g+=ray(a,6,.5));[45,135,225,315].forEach(a=>g+=ray(a,2.3,.2));return g+'<circle r=".36" fill="url(#qrB)"/>'};
  const build=u=>{qr=window.JCQR(0,"H");qr.addData(u);qr.make();
   /* original style: round dots, soft rounded eyes, small two-tone gold sparkle in a clear centre */
-  const n=qr.getModuleCount(),m=3,N=n+2*m,c=N/2,R=n*.118,ink="#313A33";
+  const n=qr.getModuleCount(),m=3,N=n+2*m,c=N/2,R=n*.19,ink="#313A33";
   const inFinder=(r,q)=>(r<7&&q<7)||(r<7&&q>=n-7)||(r>=n-7&&q<7);
   let d="";
   for(let r=0;r<n;r++)for(let q=0;q<n;q++){if(!qr.isDark(r,q)||inFinder(r,q))continue;
@@ -5324,16 +5338,16 @@ document.getElementById("yr").textContent=new Date().getFullYear();
   const eye=(r,q)=>{const x=q+m,y=r+m;return '<rect x="'+x+'" y="'+y+'" width="7" height="7" rx="1.9" fill="'+ink+'"/><rect x="'+(x+1)+'" y="'+(y+1)+'" width="5" height="5" rx="1" fill="#fff"/><rect x="'+(x+2)+'" y="'+(y+2)+'" width="3" height="3" rx=".75" fill="'+ink+'"/>'};
   const sc=n/33;
   qrSvg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+N+' '+N+'" shape-rendering="geometricPrecision"><defs>'+
-   '<linearGradient id="qrL" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="-2"><stop offset="0" stop-color="#C9A55E"/><stop offset=".45" stop-color="#D8BC84"/><stop offset="1" stop-color="#F1E9D6"/></linearGradient>'+
-   '<linearGradient id="qrD" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="-2"><stop offset="0" stop-color="#8E6C2B"/><stop offset=".45" stop-color="#B8944F"/><stop offset="1" stop-color="#E9DEC6"/></linearGradient>'+
+   '<linearGradient id="qrL" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#F3E1AE"/><stop offset=".5" stop-color="#D4B06A"/><stop offset="1" stop-color="#B58F4A"/></linearGradient>'+
+   '<linearGradient id="qrD" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#B8944F"/><stop offset=".5" stop-color="#9C7733"/><stop offset="1" stop-color="#7F5F24"/></linearGradient>'+
    '<radialGradient id="qrB"><stop offset="0" stop-color="#FFF6D8"/><stop offset=".55" stop-color="#D4B06A"/><stop offset="1" stop-color="#8E6C2B"/></radialGradient></defs>'+
    '<rect width="'+N+'" height="'+N+'" rx="1.2" fill="#fff"/><path d="'+d+'" fill="'+ink+'"/>'+eye(0,0)+eye(0,n-7)+eye(n-7,0)+
    '<g transform="translate('+c+' '+c+') scale('+sc.toFixed(4)+')">'+star()+'</g></svg>';
   box.innerHTML=qrSvg};
   const labels=()=>{document.querySelectorAll(".sharelbl").forEach(e=>e.textContent=T("Share"));
-  modal.querySelector("#shareTitle").textContent=T("Share this site");modal.querySelector(".sub").textContent=T("Scan to open the site");
+  modal.querySelector("#shareTitle").textContent=T("Share this site");modal.querySelector(".sub").textContent=T("Scan to visit");
   modal.querySelector("#shCopy .t").textContent=T("Copy link");modal.querySelector("#shNative .t").textContent=T("Share");modal.querySelector("#shQr .t").textContent=T("Download QR code")};
- const open=()=>{const u=url();inp.value=u;build(u);labels();modal.hidden=false;modal.classList.add("open");document.getElementById("shCopy").focus({preventScroll:true})};
+ const open=()=>{const u=url();inp.value=u;document.getElementById("shareurlD").textContent=u.replace(/^https?:\/\//,"").replace(/\/$/,"").replace("/?","?");build(u);labels();modal.hidden=false;modal.classList.add("open");document.getElementById("shCopy").focus({preventScroll:true})};
  const close=()=>{modal.classList.remove("open");modal.hidden=true};
  document.addEventListener("click",e=>{
   if(e.target.closest(".sharebtn"))open();
