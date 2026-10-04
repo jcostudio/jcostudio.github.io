@@ -431,9 +431,13 @@ html[dir="rtl"] header>.sharewrap{left:auto;right:1.4rem}
 #shareModal.open{display:flex}
 .sharecard{position:relative;width:min(92vw,380px);padding:2rem 1.6rem 1.6rem;border-radius:34px;background:rgba(252,250,246,.97);border:1px solid rgba(200,185,160,.5);box-shadow:0 40px 90px -36px rgba(70,84,90,.55);text-align:center;animation:sharein .7s cubic-bezier(.2,.7,.2,1)}
 /* headline: same brushed-gold finish as the brooch, with a slow light sweep */
-header .hl{background-image:linear-gradient(105deg,rgba(255,250,232,0) 0%,rgba(255,250,232,0) 41%,rgba(255,250,232,.55) 46%,rgba(255,252,240,.95) 50%,rgba(255,250,232,.55) 54%,rgba(255,250,232,0) 59%,rgba(255,250,232,0) 100%),linear-gradient(180deg,#BBA874 0%,#A08848 30%,#846C34 50%,#9A8250 60%,#C2B07E 78%,#D3C49C 88%,#A08848 100%);background-size:250% 100%,100% 100%;background-repeat:no-repeat;background-position:115% 0,0 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 1px 0 rgba(255,250,235,.55)) drop-shadow(0 3px 12px rgba(150,125,60,.28));animation:hlshine 7s cubic-bezier(.45,.05,.35,1) 1.2s infinite}
-@keyframes hlshine{0%{background-position:115% 0,0 0}55%,100%{background-position:-15% 0,0 0}}
+header .hl{background-image:linear-gradient(105deg,rgba(255,250,232,0) 0%,rgba(255,250,232,0) 41%,rgba(255,250,232,.55) 46%,rgba(255,252,240,.95) 50%,rgba(255,250,232,.55) 54%,rgba(255,250,232,0) 59%,rgba(255,250,232,0) 100%),linear-gradient(180deg,#BBA874 0%,#A08848 30%,#846C34 50%,#9A8250 60%,#C2B07E 78%,#D3C49C 88%,#A08848 100%);background-size:250% 100%,100% 100%;background-repeat:no-repeat;background-position:115% 0,0 0;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;filter:drop-shadow(0 1px 0 rgba(255,250,235,.55)) drop-shadow(0 3px 12px rgba(150,125,60,.28));animation:hlshine 5s cubic-bezier(.45,.05,.35,1) 1.2s infinite}
+@keyframes hlshine{0%{background-position:115% 0,0 0}60%,100%{background-position:-15% 0,0 0}}
 @media(prefers-reduced-motion:reduce){header .hl{animation:none;background-position:50% 0,0 0}}
+.mamm-feature{position:relative;z-index:1;width:min(100%,1180px);margin:2.6rem auto 2.4rem;border-radius:30px;overflow:hidden;box-shadow:0 50px 110px -46px rgba(50,60,70,.6),0 0 0 1px rgba(214,196,160,.45)}
+.mamm-feature img{display:block;width:100%;height:auto;aspect-ratio:1736/1080;object-fit:cover;cursor:zoom-in}
+@media(max-width:700px){.mamm-feature{border-radius:20px;margin:1.8rem auto}}
+#fld-mmA{max-width:1180px;margin-inline:auto}
 @keyframes sharein{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
 .sharecard h3{font:400 1.7rem "Cormorant Garamond",Georgia,serif;margin:0 0 .3rem}
 .sharecard .sub{font-size:.92rem;color:#6d786f;margin:0 0 1.1rem}
@@ -544,6 +548,7 @@ header .hl{background-image:linear-gradient(105deg,rgba(255,250,232,0) 0%,rgba(2
       <p>MAMM Alliance raises scholarship funds for fine and performing arts students, but its social presence was flat: logos, show titles, and headshots, with a team still learning the platforms. I audited the accounts, defined a brand voice rooted in the arts, and built a content strategy and editorial calendar around one idea: every post should feel like a glimpse of opening night.</p>
       <p>I curated rich, high-contrast imagery of concert halls, orchestras, choirs, and dancers, then paired it with quote graphics, so the feed worked as an exhibition that made people curious about the mission.</p>
     </div>
+    <figure class="mamm-feature"><img src="photos/mamm/dancer.jpg" alt="Misty Copeland mid-leap on a New York rooftop, curated for MAMM Alliance" width="1736" height="1080" loading="lazy"></figure>
     <div class="field" id="fld-mmA"></div>
   </div>
 
@@ -5131,7 +5136,7 @@ cats.forEach((c,n)=>{
   fil.append(b);
 });
 (()=>{
- const FR=[["curation/fr-16.jpg", 0.7727], ["curation/fr-01.jpg", 0.669], ["curation/fr-03.jpg", 1.0446], ["curation/fr-15.jpg", 1.5795], ["curation/fr-05.jpg", 0.66], ["curation/fr-09.jpg", 0.9806], ["curation/fr-17.jpg", 0.6642], ["curation/fr-04.jpg", 0.755], ["curation/fr-07.jpg", 0.8346], ["curation/fr-02.jpg", 0.6752], ["curation/fr-08.jpg", 0.8], ["curation/fr-11.jpg", 0.6667], ["curation/fr-14.jpg", 0.7578], ["curation/fr-06.jpg", 0.6575], ["curation/fr-12.jpg", 0.6284]], ZZ=[["curation/zz-05.jpg", 1.4206], ["curation/zz-19.jpg", 0.5997], ["curation/zz-06.jpg", 0.7567], ["curation/zz-20.jpg", 0.6924], ["curation/zz-01.jpg", 1.0065], ["curation/zz-18.jpg", 0.8804], ["curation/zz-22.jpg", 2.4325], ["curation/zz-04.jpg", 0.7222], ["curation/zz-16.jpg", 0.8029], ["curation/zz-24.jpg", 2.2], ["curation/zz-07.jpg", 0.957], ["curation/zz-02.jpg", 0.8564], ["curation/zz-15.jpg", 0.9434], ["curation/zz-21.jpg", 0.8754], ["curation/zz-23.jpg", 1.812]], MA=[["mamm/choirs.jpg", 1.0162], ["mamm/dancer.jpg", 1.6074], ["mamm/orchestra.jpg", 1.5034], ["mamm/quote.jpg", 0.9973], ["mamm/windsymphony.jpg", 1.4883]], MB=[["mamm/train-1.jpg", 1.5621], ["mamm/train-3.jpg", 0.7124], ["mamm/train-2.jpg", 0.7412], ["mamm/train-4.jpg", 0.7739]], MC=[["mamm/ramble-flyer.jpg", 1.4707], ["mamm/apple-flyer.jpg", 0.678], ["mamm/founders-day.jpg", 0.8362], ["mamm/parade.jpg", 1.0123]];
+ const FR=[["curation/fr-16.jpg", 0.7727], ["curation/fr-01.jpg", 0.669], ["curation/fr-03.jpg", 1.0446], ["curation/fr-15.jpg", 1.5795], ["curation/fr-05.jpg", 0.66], ["curation/fr-09.jpg", 0.9806], ["curation/fr-17.jpg", 0.6642], ["curation/fr-04.jpg", 0.755], ["curation/fr-07.jpg", 0.8346], ["curation/fr-02.jpg", 0.6752], ["curation/fr-08.jpg", 0.8], ["curation/fr-11.jpg", 0.6667], ["curation/fr-14.jpg", 0.7578], ["curation/fr-06.jpg", 0.6575], ["curation/fr-12.jpg", 0.6284]], ZZ=[["curation/zz-05.jpg", 1.4206], ["curation/zz-19.jpg", 0.5997], ["curation/zz-06.jpg", 0.7567], ["curation/zz-20.jpg", 0.6924], ["curation/zz-01.jpg", 1.0065], ["curation/zz-18.jpg", 0.8804], ["curation/zz-22.jpg", 2.4325], ["curation/zz-04.jpg", 0.7222], ["curation/zz-16.jpg", 0.8029], ["curation/zz-24.jpg", 2.2], ["curation/zz-07.jpg", 0.957], ["curation/zz-02.jpg", 0.8564], ["curation/zz-15.jpg", 0.9434], ["curation/zz-21.jpg", 0.8754], ["curation/zz-23.jpg", 1.812]], MA=[["mamm/choirs.jpg", 1.0162], ["mamm/orchestra.jpg", 1.5034], ["mamm/quote.jpg", 0.9973], ["mamm/windsymphony.jpg", 1.4883]], MB=[["mamm/train-1.jpg", 1.5621], ["mamm/train-3.jpg", 0.7124], ["mamm/train-2.jpg", 0.7412], ["mamm/train-4.jpg", 0.7739]], MC=[["mamm/ramble-flyer.jpg", 1.4707], ["mamm/apple-flyer.jpg", 0.678], ["mamm/founders-day.jpg", 0.8362], ["mamm/parade.jpg", 1.0123]];
  const build=(id,list,alt)=>{const f=document.getElementById(id);if(!f)return f;
   f.innerHTML=list.map((t,i)=>'<figure class="ft frise" data-r="'+t[1]+'" data-depth="'+(0.5+((i*37)%10)/20).toFixed(2)+'" style="--dl:'+(-(i%6)*1.3).toFixed(1)+'s"><img src="photos/'+t[0]+'" alt="'+alt+'" loading="eager"></figure>').join("");return f};
  const frF=build("fld-fr",FR,"A curated image for the French Spotlight"),zzF=build("fld-zz",ZZ,"A mood board image for ZzyxX Shoes"),maF=build("fld-mmA",MA,"Curated fine arts imagery for MAMM Alliance"),mbF=build("fld-mmB",MB,"JC training the MAMM Alliance team on social media"),mcF=build("fld-mmC",MC,"A campaign graphic for MAMM Alliance");
@@ -5156,7 +5161,7 @@ cats.forEach((c,n)=>{
   const put=(t,col,row,span)=>{t.style.gridColumn=col;t.style.gridRow=span?row+" / span 2":row;t.style.justifySelf="center"};
   put(q,1,1);put(w,1,2);put(d,2,1,true);put(c,3,1);put(o,3,2);d.classList.add("hero")};
  const unHero=f=>{if(!f)return;f.style.display=f.style.gridTemplateColumns=f.style.justifyContent=f.style.alignItems="";f.querySelectorAll(".ft").forEach(t=>{t.style.gridColumn=t.style.gridRow=t.style.justifySelf="";t.classList.remove("hero")})};
- const lay2=()=>{const w=innerWidth;layField(frF,w<700?[270,200]:w<1100?[360,270]:w<1500?[470,330,400,310]:w<1700?[560,390,480,360]:[600,430,520,400]);if(innerWidth<900){unHero(maF);layField(maF,innerWidth<700?[250,210]:[340,290])}else layHero(maF);layField(mbF,innerWidth<700?[260,220]:innerWidth<1100?[340,290]:innerWidth<1500?[450,380]:[520,440]);layField(mcF,innerWidth<700?[260,220]:innerWidth<1100?[340,290]:innerWidth<1500?[450,380]:[540,450]);layField(zzF,w<700?[270,230]:w<1100?[360,310]:w<1500?[480,420]:w<1700?[600,500]:[640,540])};
+ const lay2=()=>{const w=innerWidth;layField(frF,w<700?[270,200]:w<1100?[360,270]:w<1500?[470,330,400,310]:w<1700?[560,390,480,360]:[600,430,520,400]);if(innerWidth<900){unHero(maF);layField(maF,innerWidth<700?[250,210]:[340,290])}else if(maF&&maF.querySelectorAll(".ft").length<5)layField(maF,[300]);else layHero(maF);layField(mbF,innerWidth<700?[260,220]:innerWidth<1100?[340,290]:innerWidth<1500?[450,380]:[520,440]);layField(mcF,innerWidth<700?[260,220]:innerWidth<1100?[340,290]:innerWidth<1500?[450,380]:[540,450]);layField(zzF,w<700?[270,230]:w<1100?[360,310]:w<1500?[480,420]:w<1700?[600,500]:[640,540])};
  lay2();addEventListener("resize",()=>{clearTimeout(lay2.t);lay2.t=setTimeout(lay2,120)});addEventListener("load",lay2);
  const tiles=[...document.querySelectorAll(".ft")];
  tiles.forEach(t=>t.addEventListener("click",()=>{const im=t.querySelector("img");lbi.src=im.src;lbi.alt=im.alt;lb.classList.add("open")}));
@@ -5248,7 +5253,7 @@ document.querySelectorAll("section").forEach(x=>{x.classList.add("pre");io.obser
 addEventListener("scroll",()=>document.documentElement.style.setProperty("--sy",Math.min(scrollY,1400)),{passive:true});
 const hero=document.getElementById("top");
 addEventListener("scroll",()=>bar.classList.toggle("show",scrollY>hero.offsetHeight*.6),{passive:true});
-lb.onclick=()=>lb.classList.remove("open");
+document.querySelectorAll(".mamm-feature img").forEach(i=>i.onclick=()=>{lbi.src=i.src;lbi.alt=i.alt;lb.classList.add("open")});lb.onclick=()=>lb.classList.remove("open");
 addEventListener("keydown",e=>{if(e.key==="Escape")lb.classList.remove("open")});
 document.getElementById("yr").textContent=new Date().getFullYear();
 (()=>{
